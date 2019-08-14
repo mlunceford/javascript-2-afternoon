@@ -38,12 +38,18 @@ let favoriteThings = {
   movie: 'the man who knew too little',
   holiday: 'thanksgiving'
 }
+
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
   and then another key named 'brand' with the value being your favorite brand.
 */
 
 //Code here
+let c = 'car';
+let cn = '911'
+favoriteThings[c] = cn
+
+favoriteThings.brand = 'porche'
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
@@ -51,6 +57,14 @@ let favoriteThings = {
 */
 
 //Code here
+// bad way bracket notation
+// let food1 = 'food';
+// let foodname = 'Chicken Nuggets'
+// favoriteThings[food1] = foodname
+// better way
+favoriteThings['food'] = 'Chicken Nuggets';
+// dot notation
+favoriteThings.book = 'Harry Potter';
 
 ////////// PROBLEM 3 //////////
 
@@ -63,12 +77,17 @@ let favoriteThings = {
 */
 
 //Code here
-
+let backPack = {
+};
+let item = 'firstPocket';
+backPack[item] = 'chapstick';
+backPack.color = 'blue';
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
+alert(backPack)
 
 /*
 You probably noticed that it just alerted [object Object].
@@ -77,6 +96,7 @@ Instead, console.log your whole backPack object and then check out the console.
 */
 
 //Code here
+console.log(backPack)
 
 ////////// PROBLEM 4 //////////
 

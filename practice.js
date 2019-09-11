@@ -17,11 +17,9 @@
 //Code here
 let me = {
   name: 'Mark',
-  age: 30
-  };
-
+  age: 30,
+}
 alert(me.name)
-
 ////////// PROBLEM 2 //////////
 
 /*
@@ -31,24 +29,20 @@ alert(me.name)
 
 //Code here
 let favoriteThings = {
-  band: 'emarosa',
-  food: 'pizza',
-  person: 'CJ',
-  book: 'ender\'s game',
-  movie: 'the man who knew too little',
+  band: 'sleeping with sirens',
+  food: 'chicken wings',
+  person: 'wife',
+  book: 'reckoners',
+  movie: 'v for vendetta',
   holiday: 'thanksgiving'
 }
-
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
   and then another key named 'brand' with the value being your favorite brand.
 */
 
 //Code here
-let c = 'car';
-let cn = '911'
-favoriteThings[c] = cn
-
+favoriteThings.car = '911'
 favoriteThings.brand = 'porche'
 
 /*
@@ -57,15 +51,8 @@ favoriteThings.brand = 'porche'
 */
 
 //Code here
-// bad way bracket notation
-// let food1 = 'food';
-// let foodname = 'Chicken Nuggets'
-// favoriteThings[food1] = foodname
-// better way
-favoriteThings['food'] = 'Chicken Nuggets';
-// dot notation
-favoriteThings.book = 'Harry Potter';
-
+favoriteThings.food = 'Chicken Nuggets'
+favoriteThings.book = 'Harry Potter'
 ////////// PROBLEM 3 //////////
 
 /*
@@ -78,17 +65,19 @@ favoriteThings.book = 'Harry Potter';
 
 //Code here
 let backPack = {
-};
-let item = 'firstPocket';
-backPack[item] = 'chapstick';
-backPack.color = 'blue';
+  
+
+}
+let item = 'firstPocket'
+backPack[item] = 'chapstick'
+backPack.color = 'black'
+
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
 alert(backPack)
-
 /*
 You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
@@ -97,7 +86,6 @@ Instead, console.log your whole backPack object and then check out the console.
 
 //Code here
 console.log(backPack)
-
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
@@ -119,7 +107,7 @@ var user2 = {
 
 //Code Here
 user2.name = 'Bryan G. Smith'
-user2.email = 'bryan.smith@devmounta.in'
+user2.email= 'bryan.smith@devmounta.in'
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
 
@@ -130,19 +118,28 @@ user2.email = 'bryan.smith@devmounta.in'
 */
 
 //Code Here
+let methodCollection = {
 
+}
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object.
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
 
 //Code Here
-
+methodCollection.alertHello = function (){
+  alert('hello')
+}
+methodCollection.logHello = function (){
+  console.log('hello')
+}
 /*
   Now call your alertHello and logHello methods.
 */
 
 //Code Here
+methodCollection.alertHello()
+methodCollection.logHello()
 
 ////////// PROBLEM 6 //////////
 
@@ -152,7 +149,14 @@ user2.email = 'bryan.smith@devmounta.in'
 */
 
 //Code Here
-
+function makePerson(name, birthday, ssn){
+  let person = {
+    name: name,
+    birthday: birthday,
+    ssn: ssn,
+  }
+  return person
+}
 ////////// PROBLEM 7 //////////
 
 /*
@@ -160,4 +164,6 @@ user2.email = 'bryan.smith@devmounta.in'
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-//Code Here
+function makeCard(cardNumber, expirationDate, securityCode){
+  return {cardNumber: cardNumber, expirationDate: expirationDate, securityCode: securityCode}
+}
